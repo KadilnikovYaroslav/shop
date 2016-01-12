@@ -42,7 +42,7 @@
 
 .filter__content {
     margin-bottom: 30px;
-    display: none;
+    isplay: none;
 }
 
 .filter__list {
@@ -66,19 +66,6 @@
     }
 }
 
-.filter__title {
-    padding-right: 30px;
-    position: relative;
-    
-    &:after {
-        content: '';
-        @include get-sprite($select-tr-map, to-bottom);
-        position: absolute;
-        top: 7px;
-        right: 10px;
-    }
-}
-
 .filter__choose-item {
     margin-top: 16px;
     
@@ -98,6 +85,19 @@
 
 .filter__choose {
     margin-bottom: 13px;
+}
+
+.filter__title {
+    padding-right: 30px;
+    position: relative;
+    
+    &:after {
+        content: '';
+        @include get-sprite($select-tr-map, to-bottom);
+        position: absolute;
+        top: 7px;
+        right: 10px;
+    }
 }
 
 .filter__choose-label {
@@ -221,7 +221,7 @@
 
 /* ---------- slider ---------- */
 
-.filter__slider-display {
+.filter__slider-displays {
     @include clearfix;
     margin-bottom: 18px;
 }

@@ -6,7 +6,7 @@ var SliderWidget = (function(){
             from = container.find('.filter__slider-input_from'),
             to = container.find('.filter__slider-input_to');
         
-        var values = $this.slider('option', 'values');
+        var values = $this.slider('option','values');
         
         from.val(values[0]);
         to.val(values[1]);
@@ -26,7 +26,7 @@ var SliderWidget = (function(){
                     range: true,
                     min: min,
                     max: max,
-                    values: [ min, max ],
+                    values: [min, max],
                     slide: function() {
                         _insertValues($this);
                     },
@@ -49,7 +49,7 @@ var RatingWidget = (function() {
             var
                 starClassName = (i < ratingAmount) ? 'products__rating-stars-item products__rating-stars-item_filled' : 'products__rating-stars-item';
             var
-                star = $('<li>',{
+                star = $('<li>', {
                    class: starClassName;
                 });
             
