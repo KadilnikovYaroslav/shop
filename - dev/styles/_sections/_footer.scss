@@ -8,13 +8,13 @@
 }
 
 .footer__left {
-    width: 45px;
+    width: 45%;
     float: left;
     padding-top: 34px;
 }
 
 .footer__right {
-    width: 555px;
+    width: 55%;
     float: right;
     text-align: right;
 }
@@ -25,7 +25,7 @@
     }
 }
 
-$footer-socials-map: sprite-map('icons/footer/socials-footer/*.png', $spacing: 70px);
+$socials-footer-map: sprite-map('icons/socials-footer/*.png', $spacing: 70px);
 
 .socials_footer {
     margin-bottom: 21px;
@@ -47,7 +47,7 @@ $footer-socials-map: sprite-map('icons/footer/socials-footer/*.png', $spacing: 7
         .socials__item_#{$item} {
             .socials__link {
                 &:after {
-                    @include get-sprite($footer-socials-map, $item);
+                    @include get-sprite($socials-footer-map, $item);
                     content: '';
                     @include absolute-center;
                 }
@@ -55,7 +55,7 @@ $footer-socials-map: sprite-map('icons/footer/socials-footer/*.png', $spacing: 7
                 &:hover {
                     &:after {
                         $icon-name: $item + '-hover';
-                        @include get-sprite($footer-socials-map, $icon-name);   
+                        @include get-sprite($socials-footer-map, $icon-name);   
                     }
                 }
             }

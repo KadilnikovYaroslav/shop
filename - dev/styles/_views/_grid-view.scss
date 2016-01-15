@@ -3,7 +3,7 @@
     overflow: auto;
     @include border-radius(0px);
     margin-left: -11px;
-    background: transparent;
+//    background: transparent;
     
     .products__item {
         @include inlineblock();
@@ -68,6 +68,7 @@
     
     .products__left {
         position: static;
+//        float: none;
     }
     
     .products__right {

@@ -6,12 +6,17 @@
     margin-bottom: 21px;
 }
 
-.sort__title {
+.sort__title, .sort__title-view-the-catalog {
     font-size: 14px;
     line-height: 16px;
     color: #5d656c;
     @include inlineblock(middle);
     margin-right: 11px;
+}
+
+.sort__title-view-the-catalog {
+    position: relative;
+    top: -20px;
 }
 
 .sort__select {
@@ -52,6 +57,11 @@
 
 .sort__view-icon {
     @include absolute-center;
+}
+
+.sort__select--wrap {
+    padding-top: 11px;
+    padding-left: 20px;
 }
 
 .sort__select--wrap {

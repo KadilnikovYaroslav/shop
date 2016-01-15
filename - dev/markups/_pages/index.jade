@@ -24,7 +24,7 @@ block content
                                         each option in options
                                             option(value="")= option
                         .sort__right
-                            .sort__title
+                            .sort__title-view-the-catalog
                                 | Вид каталога
                             .sort__view
                                 ul.sort__view-list
@@ -35,7 +35,7 @@ block content
                                                 .sort__view-icon
                     .products
                         ul.products__list#products-list
-                            -for (var i = 0; i < 9; i++)
+                            - for (var i = 0; i < 9; i++)
                                 li.products__item
                                     .products__item-inner
                                         .products_left
@@ -60,13 +60,13 @@ block content
                                                         li(class="products__option-item" + (!(index++ % 2) ? ' products__option-item_colored' : ''))
                                                             .products__option-key= item
                                                             .products__option-value= options[item]
-                                                div(class="products__rating" data-rating="2")
+                                                div(class="products__rating" data-rating="4")
                                         .products__right
                                             .products__info
                                                 .products__price 11 290
                                                     i.rub
                                             .products__info-bottom
-                                                a(href="").products__buy-btn В корзину
+                                                a(href="#").products__buy-btn В корзину
                                                 .products__availability
                                                     | В наличии
                     .pagination
@@ -77,7 +77,7 @@ block content
                             - for(var i = 1; i < 4; i++)
                                 li.pagination__item
                                     a(href="#").pagination__link
-                                        .pagination__mark= 1
+                                        .pagination__mark= i
                             li.pagination__item.pagination__item_next
                                 a(href="#").pagination__link
                                     .pagination__mark
@@ -85,9 +85,10 @@ block content
                 .main-title
                     | Важная информация
                 .attension__text
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
-                    p TextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextTextText
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun
+                    p Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun Lorem ispun

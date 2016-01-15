@@ -40,9 +40,11 @@
 
 /* ---------- filter ---------- */
 
+
+
 .filter__content {
     margin-bottom: 30px;
-    isplay: none;
+    display: none;
 }
 
 .filter__list {
@@ -60,9 +62,22 @@
     &.active {
         .filter__title {
             &:after {
-                @include get-sprite($select-tr-map, to-top);
+                @include get-sprite($select-map, up);
             }
         }
+    }
+}
+
+.filter__title {
+    padding-right: 30px;
+    position: relative;
+    
+    &:after {
+        content: '';
+        @include get-sprite($select-map, down);
+        position: absolute;
+        top: 7px;
+        right: 10px;
     }
 }
 
@@ -85,19 +100,6 @@
 
 .filter__choose {
     margin-bottom: 13px;
-}
-
-.filter__title {
-    padding-right: 30px;
-    position: relative;
-    
-    &:after {
-        content: '';
-        @include get-sprite($select-tr-map, to-bottom);
-        position: absolute;
-        top: 7px;
-        right: 10px;
-    }
 }
 
 .filter__choose-label {

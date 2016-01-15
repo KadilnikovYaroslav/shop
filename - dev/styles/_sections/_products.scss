@@ -149,7 +149,7 @@
     line-height: 16px;
 }
 
-/* ---------- description ---------- */
+/* ---------- rating ---------- */
 
 .products__rating-stars {
     @include inlineblock(middle);
@@ -220,7 +220,7 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
 }
 
 .products__availability {
-    @include open-sans();
+    @include open-sans(bold);
     font-size: 12px;
     line-height: 14px;
     color: #7f7f7f;
@@ -238,5 +238,5 @@ $stars-map: sprite-map('icons/stars/*.png', $spacing: 70px);
 
 /* ---------- other views ---------- */
 
-@import "_views/_grid-view";
-@import "_views/_line-view";
+@import "../_views/_grid-view";
+@import "../_views/_line-view";

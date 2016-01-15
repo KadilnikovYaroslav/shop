@@ -50,7 +50,7 @@ var RatingWidget = (function() {
                 starClassName = (i < ratingAmount) ? 'products__rating-stars-item products__rating-stars-item_filled' : 'products__rating-stars-item';
             var
                 star = $('<li>', {
-                   class: starClassName;
+                   class: starClassName
                 });
             
             starsArray.push(star);
@@ -63,13 +63,13 @@ var RatingWidget = (function() {
         var 
             ul = $('<ul>', {
                 class: 'products__rating-stars',
-                html: _letTheStarsShining(ratingAmount);
+                html: _letTheStarsShining(ratingAmount)
             });
         
         var
             ratingDisplay = $('<div>', {
                 class: 'products__rating-amount',
-                text: ratingAmount;
+                text: ratingAmount
             });
         
         elementToAppend.append([ul, ratingDisplay]);
@@ -88,46 +88,9 @@ var RatingWidget = (function() {
     }
 }());
 
-var ViewStateChange = (function() {
-    
-    var _previousClass = '';
-    
-    var _changeState = function($this){
-        var
-            item = $this.closest('.sort__view-item'),
-            view = item.data('view'),
-            listOfItems = $('#products-list'),
-            modificationPrefix = 'products-list_',
-            classOfViewState = modificationPrefix + view;
-        
-        if (_previousClass == '') {
-            _previousClass = listOfItems.attr('class');
-        }
-        
-        _changeActiveClass($this);
-        
-        listOfItems.attr('class', _previousClass + ' ' + classOfViewState);
-    };
-    
-    var _changeActiveClass = function($this) {
-        $this
-            .closest('.sort__view-item').addClass('active')
-            .siblings().removeClass('active');
-    }
-    
-    return {
-        init: function() {
-            $('.sort__view-link').on('click', function(e){
-                e.preventDefault();
-                _changeState($(this));
-            });
-        }
-    }
-}());
-
 var Slideshow = (function(){
     
-    var _changeSlide = function(this){
+    var _changeSlide = function($this){
         var
             container = $this.closest('.products__slideshow'),
             path = $this.find('img').attr('src'),
@@ -185,19 +148,48 @@ var Accordeon = (function(){
     }
 }());
 
+var ViewStateChange = (function() {
+    
+    var _previousClass = '';
+    
+    var _changeState = function($this){
+        var
+            item = $this.closest('.sort__view-item'),
+            view = item.data('view'),
+            listOfItems = $('#products-list'),
+            modificationPrefix = 'products__list_',
+            classOfViewState = modificationPrefix + view;
+        
+        if (_previousClass == '') {
+            _previousClass = listOfItems.attr('class');
+        }
+        
+        _changeActiveClass($this);
+        
+        listOfItems.attr('class', _previousClass + ' ' + classOfViewState);
+    };
+    
+    var _changeActiveClass = function($this) {
+        $this
+            .closest('.sort__view-item').addClass('active')
+            .siblings().removeClass('active');
+    }
+    
+    return {
+        init: function() {
+            $('.sort__view-link').on('click', function(e){
+                e.preventDefault();
+                _changeState($(this));
+            });
+        }
+    }
+}());
+
 $(document).ready(function(){
-    
-    if($('.filter').length) {
-        Accordeon.init();
-    }
-    
-    if ($('.products__slideshow').length) {
-        Slideshow.init();
-    }
     
     ViewStateChange.init();
     
-    if ($('.products__rating').length) {
+     if ($('.products__rating').length) {
         RatingWidget.init();
     }
     
@@ -208,12 +200,6 @@ $(document).ready(function(){
     if ($('.sort__select-elem').length) {
         $('.sort__select-elem').select2({
             minimumResultsForSearch: Infinity
-        });
-    }
-    
-    if ($('.sort__select-elem').length) {
-        $('.sort__select-elem').select2({
-           minimumResultsForSearch: Infinity 
         });
     }
     
@@ -230,6 +216,14 @@ $(document).ready(function(){
         });
     });
     
+    if ($('.filter').length) {
+        Accordeon.init();
+    }
+    
+    if ($('.products__slideshow').length) {
+        Slideshow.init();
+    }
+                   
     /* ---------- columnizer ---------- */
     
     $('.attension__text').columnize({
